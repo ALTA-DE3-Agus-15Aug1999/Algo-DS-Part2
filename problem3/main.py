@@ -1,5 +1,11 @@
 def playing_domino(cards, deck):
-    return []
+    hasil = []
+    for domino in cards:
+        if deck[0] in domino:
+            hasil.append(domino)
+        elif deck[1] in domino:
+            hasil.append(domino)
+    return hasil[0] if hasil else []
 
 if __name__ == "__main__":
     print(playing_domino([[6, 5], [3, 4], [2, 1], [3, 3]], [4, 3]))  # [3, 4]
